@@ -1,0 +1,44 @@
+#alertbox {
+	height: auto;
+}
+
+#video-area,
+#video-area iframe {
+	height: 50%;	/* 영상이 나오는 가로 크기, % 단위 권장 */
+	width: 50%;	/* 영상이 나오는 세로 크기, % 단위 권장 */
+}
+
+#body.layout-above #media-label {
+	top: 50%;		/* 영상의 소개 문구가 나오는 세로 기준 위치, 위의 영상 세로 크기와 일치 권장 */
+	right: unset;
+	width: 49%;		/* 소개 문구의 가로 길이 */
+	margin-left: 0.5%;	/* 소개 문구의 왼쪽 여백 */
+	margin-right: 0.5%;	/* 소개 문구의 오른쪽 여백 */
+	text-align: initial;
+}
+
+#media-label-loading,
+#body.layout-above #image-wrap {
+	display: none;
+}
+
+#body.layout-above #text-wrap {
+	background: rgba(0, 0, 0, 0.5);	/* 배경 색 */
+}
+
+#alert-text {
+	padding: 0;
+}
+
+#body.layout-above h1 {
+	padding-top: 0.5%;	/* 알림 코멘트의 상단 여백 */
+}
+
+#body.layout-above h2 {
+	padding-bottom: 0.5%;	/* 알림 코멘트의 하단 여백 */
+}
+
+#body.layout-above h1.hide,
+#body.layout-above h1.hide + h2 {
+	padding: 0;
+}
