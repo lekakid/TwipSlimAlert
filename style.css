@@ -11,13 +11,19 @@
 		width: calc(100vh / 9 * 16);
 		height: 100vh;
 	}
+	
+	#wrap {
+		display: flex;
+		justify-content: center;
+		
+	}
 
 	#media-label {
 		display: none;
 	}
 
 	#body #image-wrap {
-		display: none;
+		display: none !important;
 	}
 }
 
