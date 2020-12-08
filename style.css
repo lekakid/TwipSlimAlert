@@ -34,7 +34,7 @@
 		top: calc((10vh - var(--media-label-size)) / 2);
 		right: auto;
 		bottom: auto;
-		height: 10vh;
+		height: 100vh;
 		z-index: 10000;
 	}
 
