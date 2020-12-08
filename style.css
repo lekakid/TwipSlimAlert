@@ -1,45 +1,73 @@
-#alertbox {
-	height: auto;
+:root {
+	--media-label-size: 38px;
 }
 
-#video-area {
-	height: 90vh;
-	width: 160vh;
-	max-width: 100%;
+#body #text-wrap {
+	text-align: center;
 }
 
-#body.layout-above #media-label {
-	top: 90vh;
-	right: unset;
-	width: 158vh;
-	margin-left: 1vh;
-	margin-right: 1vh;
-	
-	font-size: 5vh;
+@media screen and (min-height: 200px) {
+	#video-area {
+		width: calc(100vh / 9 * 16);
+		height: 100vh;
+	}
+
+	#media-label {
+		display: none;
+	}
+
+	#body #image-wrap {
+		display: none;
+	}
 }
 
-#media-label-loading,
-#body.layout-above #image-wrap {
-	display: none;
-}
+@media screen and (max-height: 201px) {
+	#video-area {
+		width: 100vh;
+		min-width: 72px;
+		height: 100vh;
+		min-height: 72px;
+	}
 
-#body.layout-above #text-wrap {
-	background: rgba(0, 0, 0, 0.5);	/* 배경 색 */
-}
+	#media-label {
+		margin-left: calc(10vh + 10px);
+		top: calc((10vh - var(--media-label-size)) / 2);
+		right: auto;
+		bottom: auto;
+		height: 10vh;
+		z-index: 10000;
+	}
 
-#alert-text {
-	padding: 0;
-}
+	#alertbox #wrap {
+		height: 100%;
+		min-height: 72px;
+		padding: 0;
+		justify-content: center;
+	}
 
-#body.layout-above h1 {
-	padding-top: 0.5%;	/* 알림 코멘트의 상단 여백 */
-}
+	#body.layout-above #wrap,
+	#body.layout-side #wrap {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 
-#body.layout-above h2 {
-	padding-bottom: 0.5%;	/* 알림 코멘트의 하단 여백 */
-}
+	#body.layout-banner #alert-image {
+		background-size: cover;
+	}
 
-#body.layout-above h1.hide,
-#body.layout-above h1.hide + h2 {
-	padding: 0;
+	#body.layout-above #image-wrap {
+		display: none;
+	}
+
+	#body.layout-side #image-wrap {
+		width: 100vh;
+		min-width: 72px;
+	}
+
+	#body:not([class]) #alertbox #wrap {
+		display: none;
+	}
+
+	#body #alert-text {
+		padding: 0;
+	}
 }
