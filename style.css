@@ -30,8 +30,8 @@
 	}
 
 	#media-label {
-		margin-left: calc(10vh + 10px);
-		top: calc((10vh - var(--media-label-size)) / 2);
+		margin-left: calc(100vh + 10px);
+		top: calc((100vh - var(--media-label-size)) / 2);
 		right: auto;
 		bottom: auto;
 		height: 100vh;
